@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".Createnewaccount">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="186dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/logoputih"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="-36dp" />
+
+        <RelativeLayout
+            android:id="@+id/whiteContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:background="@drawable/rounded_corners_left"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Buat Akun Baru"
+                android:textColor="@color/textColorBlack"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Isi data-data di bawah ini dengan benar"
+                android:textColor="@color/textColorGrey"
+                android:textSize="15sp"
+                android:layout_below="@id/textView1" />
+
+            <RelativeLayout
+                android:layout_width="350dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/form"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/textView">
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/textViewName"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan nama"
+                android:fontFamily="@font/poppinsregular"
+                android:padding="10dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewEmployeeID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="NIK"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                android:layout_below="@id/editTextName" />
+
+            <EditText
+                android:id="@+id/editTextEmployeeID"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_below="@id/textViewEmployeeID"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Nik Pengguna"
+                android:padding="10dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewDivision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Divisi"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="16sp"
+                android:layout_below="@id/editTextEmployeeID" />
+
+            <Spinner
+                android:id="@+id/spinnerDivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewDivision"
+                android:background="@drawable/edit_text_background"
+                android:padding="10dp"
+                android:spinnerMode="dropdown"
+                android:entries="@array/divisions" />
+
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Email"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="16sp"
+                android:layout_below="@id/spinnerDivision" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewEmail"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Email"
+                android:fontFamily="@font/poppinsregular"
+                android:padding="10dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Nomor Handphone"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="16sp"
+                android:layout_below="@id/editTextEmail" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPhoneNumber"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan nomor handphone"
+                android:inputType="phone"
+                android:fontFamily="@font/poppinsregular"
+                android:padding="10dp"
+                android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Jenis Kelamin"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_below="@id/editTextPhoneNumber" />
+
+                <Spinner
+                    android:id="@+id/spinnerGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewGender"
+                    android:background="@drawable/edit_text_background"
+                    android:fontFamily="@font/poppinsregular"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/gender_options"/>
+                <TextView
+                android:id="@+id/textViewPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Sandi"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="16sp"
+                android:layout_below="@id/spinnerGender" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPassword"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Sandi"
+                android:fontFamily="@font/poppinsregular"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textSize="16sp" />
+            </RelativeLayout>
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Tambahkan"
+                android:textColor="@color/textColorWhite"
+                android:background="@drawable/custombutton1"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_below="@id/form"
+                android:onClick="addAkun"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorBiruGelap"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_centerHorizontal="true"
+                android:text="Kembali"
+                android:id="@+id/back"
+                android:layout_below="@id/buttonAdd"
+                android:onClick="backButton"/>
+            <ImageView
+                android:id="@+id/vektor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/back"
+                android:layout_marginBottom="25dp"
+                android:src="@drawable/vector3" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

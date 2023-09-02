@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mahapanca">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.MahaPanca"
+        tools:targetApi="30">
+        <activity
+            android:name=".Editdataakun_2"
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Editdataakun"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Map"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Recap_Status_2"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Recap_Status"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Chart"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Dashboard_user"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Manage_User"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Createnewaccount"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Manage_Office"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Dashboard_Hr"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Verifikasifoto_2"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Verifikasifoto"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Verifikasilokasi"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Changepassword2"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Forgetpassword2"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Forgetpassword"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Changepassword"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Login"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDos7X0ZKkVeYMoqBjsTViH1O0xJGJastI" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.mahapanca"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

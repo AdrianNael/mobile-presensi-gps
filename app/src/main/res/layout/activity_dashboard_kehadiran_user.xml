@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
+    tools:context=".Dashboard_user">
+    <ImageView
+        android:id="@+id/homescreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/navbar"
+        android:layout_gravity="top"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:id="@+id/icon_logout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logoputih"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/icon_logout"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat datang,"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/secondaryColor"/>
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adrian Nathanael Kalalo"
+                android:textColor="@color/secondaryColor"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/icon_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:onClick="logout"
+            android:src="@drawable/icon_logout3" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/blueContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homescreen"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_background"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="174dp">
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Kehadiran"
+            android:textColor="@color/secondaryColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/iconAttendance1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="80sp"
+                android:layout_marginEnd="90sp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iconEnter"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_background_putih"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_enter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title3"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iconGohome"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/rounded_background_putih"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_gohome" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconAttendance1"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:text="Masuk"
+                android:textColor="@color/textColorBiruGelap"
+                android:background="@drawable/custombutton3"
+                android:fontFamily="@font/poppinsbold"
+                android:onClick="masukButton"
+                />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/textColorWhite"
+                android:background="@drawable/custombutton4"
+                android:text="Pulang"
+                android:fontFamily="@font/poppinsbold"
+                android:onClick="pulangButton"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/blueContainer"
+        android:id="@+id/attendanceHistory">
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Kehadiran"
+            android:layout_marginEnd="150dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/textColorBlack"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/containerAH1"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/attendanceHistory">
+        <ImageView
+            android:id="@+id/iconEnterAttendancehistory1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/rounded_background_biru"
+            android:scaleType="centerInside"
+            android:padding="7dp"
+            android:src="@drawable/icon_enterputih" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+            <TextView
+                android:id="@+id/titleAH3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masuk"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/textColorBlack"/>
+
+            <TextView
+                android:id="@+id/titleAH4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08.15 AM - Sept 17, 2023"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsregular" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Terlambat"
+            android:textColor="@color/status_terlambat"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <View
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:background="#E7F5FF"
+        android:layout_below="@id/containerAH1"
+        android:id="@+id/garisbirumuda"/>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/containerAH2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/garisbirumuda">
+        <ImageView
+            android:id="@+id/iconEnterAttendancehistory2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/rounded_background_biru"
+            android:scaleType="centerInside"
+            android:padding="7dp"
+            android:src="@drawable/icon_gohomeputih" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+            <TextView
+                android:id="@+id/titleAH5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pulang"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/textColorBlack"/>
+
+            <TextView
+                android:id="@+id/titleAH6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05.15 PM - Sept 17, 2023"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsregular" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Tepat Waktu"
+            android:textColor="@color/status_tepatwaktu"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <View
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:background="#E7F5FF"
+        android:layout_below="@id/containerAH2"
+        android:id="@+id/garisbirumuda1"/>
+    <LinearLayout
+        android:id="@+id/containerAH3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/containerAH2">
+        <ImageView
+            android:id="@+id/iconEnterAttendancehistory3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/rounded_background_biru"
+            android:scaleType="centerInside"
+            android:padding="7dp"
+            android:src="@drawable/icon_enterputih" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+            <TextView
+                android:id="@+id/titleAH7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masuk"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/textColorBlack"/>
+
+            <TextView
+                android:id="@+id/titleAH8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08.45 AM - Sept 18, 2023"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsregular" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Terlambat"
+            android:textColor="@color/status_terlambat"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <View
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
+        android:layout_height="3dp"
+        android:background="#E7F5FF"
+        android:layout_below="@id/containerAH3"
+        android:id="@+id/garisbirumuda2"/>
+    <LinearLayout
+        android:id="@+id/containerAH4"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/containerAH3">
+        <ImageView
+            android:id="@+id/iconEnterAttendancehistory"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/rounded_background_biru"
+            android:scaleType="centerInside"
+            android:padding="7dp"
+            android:src="@drawable/icon_gohomeputih" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+            <TextView
+                android:id="@+id/titleAH9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pulang"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/textColorBlack"/>
+
+            <TextView
+                android:id="@+id/titleAH10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="04.50 PM - Sept 18, 2023"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsregular" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Tepat Waktu"
+            android:textColor="@color/status_tepatwaktu"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/garis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/containerAH3"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="170dp"
+        app:srcCompat="@drawable/vector3" />
+</RelativeLayout>

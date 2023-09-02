@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#122D63" /> <!-- Warna latar belakang putih -->
+    <corners android:radius="50dp" /> <!-- Mengatur jari-jari sudut menjadi setengah dari lebar atau tinggi ikon, untuk menghasilkan lingkaran -->
+</shape>

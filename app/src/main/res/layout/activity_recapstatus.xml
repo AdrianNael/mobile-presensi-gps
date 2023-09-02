@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".Recap_Status">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="186dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logoputih"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="-38dp" />
+
+    <RelativeLayout
+        android:id="@+id/whiteContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageView"
+        android:background="@drawable/rounded_corners_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/iconManageoffice"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/rounded_background"
+                android:padding="7dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_recapstatus_putih" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Rekap Status"
+                android:textColor="@color/textColorBlack"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Pilih tanggal untuk mengetahui presensi"
+            android:textColor="@color/textColorGrey"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tvSelectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView2"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="75dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Ketuk untuk memilih tanggal"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/buttonKonfirmasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tvSelectDate"
+            android:layout_marginTop="150dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kembali"
+                android:fontFamily="@font/poppinsregular"
+                android:background="@drawable/custombutton1"
+                android:textColor="@color/secondaryColor"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="backButton"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Selanjutnya"
+                android:background="@drawable/custombutton1"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/secondaryColor"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="10dp"
+                android:onClick="selectButton"
+                />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/garis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonKonfirmasi"
+            android:layout_marginTop="350dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/vector3" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

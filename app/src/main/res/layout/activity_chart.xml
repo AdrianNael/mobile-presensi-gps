@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".Chart">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="186dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logoputih"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="-38dp" />
+
+    <RelativeLayout
+        android:id="@+id/whiteContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageView"
+        android:background="@drawable/rounded_corners_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/iconManageoffice"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/rounded_background"
+                android:padding="7dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_chart_putih" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Bagan"
+                android:textColor="@color/textColorBlack"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Rangkuman data berupa bagan"
+            android:textColor="@color/textColorGrey"
+            android:textSize="13dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/textView2"
+            android:layout_margin="20dp"
+            android:padding="10dp" />
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/chart"
+            android:layout_margin="20dp"
+            android:padding="10dp" />
+        <RelativeLayout
+            android:id="@+id/kembali"
+            android:layout_width="match_parent"
+            android:layout_below="@id/pieChart"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp">
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@drawable/custombutton1"
+                android:onClick="backButton"
+                android:text="Kembali"
+                android:textColor="@color/secondaryColor"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/garis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kembali"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/vector3" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".Manage_Office">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="186dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/logoputih"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="-38dp" />
+
+        <RelativeLayout
+            android:id="@+id/whiteContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:background="@drawable/rounded_corners_left"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="16dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/iconManageoffice"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/rounded_background"
+                android:padding="7dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_manageoffice_white" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Kelola Kantor"
+                android:textColor="@color/textColorBlack"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Isi data lokasi yang diinginkan"
+            android:textColor="@color/textColorGrey"
+            android:textSize="15dp" />
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/form"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/textView3">
+            <TextView
+                android:id="@+id/namaKantor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Kantor"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editNamakantor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/namaKantor"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Nama Kantor"
+                android:fontFamily="@font/poppinsregular"
+                android:padding="10dp"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/alamatKantor"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/editNamakantor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat Kantor"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editAlamatkantor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/alamatKantor"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Alamat Kantor"
+                android:fontFamily="@font/poppinsregular"
+                android:padding="10dp"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitude"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/editAlamatkantor"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/textViewName"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Latitude"
+                android:fontFamily="@font/poppinsregular"
+                android:padding="10dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewEmployeeID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Longtitude"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                android:layout_below="@id/editTextName" />
+
+            <EditText
+                android:id="@+id/editTextEmployeeID"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_below="@id/textViewEmployeeID"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Longtitude"
+                android:padding="10dp"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textviewimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Jarak (m)"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                android:layout_below="@id/editTextEmployeeID" />
+
+            <EditText
+                android:id="@+id/edittextimage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_below="@id/textviewimage"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Jarak"
+                android:padding="10dp"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_centerHorizontal="true"
+            android:text="Menetapkan Waktu Kerja"
+            android:layout_below="@+id/form"
+            android:textColor="@color/textColorBlack"
+            android:textSize="26dp" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textView5"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Isi data waktu yang diinginkan"
+            android:textColor="@color/textColorGrey"
+            android:textSize="18dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/jamkantor"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/textView6"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jam Masuk:"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/textColorBlack" />
+
+                    <TimePicker
+                        android:id="@+id/timePickerJamMasuk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/edit_text_background"
+                        android:fontFamily="@font/poppinsregular"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:timePickerMode="spinner" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jam Pulang:"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColorBlack"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TimePicker
+                        android:id="@+id/timePickerJamPulang"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/edit_text_background"
+                        android:timePickerMode="spinner"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+            android:id="@+id/buttonKonfirmasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/jamkantor"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Back"
+                android:background="@drawable/custombutton1"
+                android:textColor="@color/secondaryColor"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="backButton"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Konfirmasi"
+                android:background="@drawable/custombutton1"
+                android:textColor="@color/secondaryColor"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="10dp"
+                android:onClick="konfirmasiButton"
+                />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/garis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonKonfirmasi"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/vector3" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

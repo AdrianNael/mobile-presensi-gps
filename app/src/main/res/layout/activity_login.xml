@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".Login">
+    <ImageView
+        android:id="@+id/logoputih"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logoputih"
+        android:onClick="loginButtonHr"/>
+    <RelativeLayout
+        android:id="@+id/whiteContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/logoputih"
+        android:background="@drawable/rounded_corners_left" >
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Masuk"
+            android:textColor="@color/textColorBlack"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:text="Masuk untuk melanjutkan"
+            android:textColor="@color/textColorGrey"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppinsregular"
+            />
+        <RelativeLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView3"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="NIK"
+                android:fontFamily="@font/poppinsregular"/>
+            <EditText
+                android:id="@+id/editTextNik"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Nik"
+                android:textColorHint="@color/textColorBlack"
+                android:textSize="15dp"
+                android:paddingStart="20dp"
+                android:layout_below="@id/textView4"/>
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Sandi"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_below="@+id/editTextNik"/>
+
+            <EditText
+                android:id="@+id/editTextPasswrod"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:background="@drawable/edit_text_background"
+                android:hint="Masukan Sandi"
+                android:textColorHint="@color/textColorBlack"
+                android:inputType="textPassword"
+                android:textSize="15dp"
+                android:paddingStart="20dp"
+                android:layout_below="@id/textView5"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextPasswrod"
+                android:layout_alignParentEnd="true"
+                android:textSize="14dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Lupa Password"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textColorBlue"
+                android:onClick="forgetButton"/>
+
+            <Button
+                android:id="@+id/buttonmasuk"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/textView6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/custombutton1"
+                android:text="Masuk"
+                android:textColor="@color/secondaryColor"
+                android:onClick="loginButton"/>
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Rubah Kata Sandi"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/textColorBlue"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/buttonmasuk"
+                android:onClick="changeButton"/>
+
+            <ImageView
+                android:id="@+id/garis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView7"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="100dp"
+                app:srcCompat="@drawable/vector3" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="divisions">
+        <item>Software Engineering</item>
+        <item>Hardware Engineering</item>
+        <item>Management </item>
+    </string-array>
+    <string-array name="gender_options">
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

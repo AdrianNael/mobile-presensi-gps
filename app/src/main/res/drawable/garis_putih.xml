@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- Ganti dengan kode warna putih yang sesuai -->
+    <size android:height="5dp" /> <!-- Ganti dengan ketebalan garis yang diinginkan -->
+</shape>

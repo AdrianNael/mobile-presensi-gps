@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".Changepassword">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logoputih"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="-10dp" />
+
+    <RelativeLayout
+        android:id="@+id/whiteContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:background="@drawable/rounded_corners_left"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="174dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Verifikasi Lokasi"
+            android:textColor="@color/textColorBlack"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:text="Ops... Kmau diluar radius kantor, refresh sekarang untuk memperbarui lokasi"
+            android:textColor="@color/textColorGrey"
+            android:fontFamily="@font/poppinsregular"
+            />
+
+        <fragment
+            android:layout_marginBottom="25dp"
+            android:layout_centerInParent="true"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:id="@+id/google_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_below="@id/textView3" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/whiteContainer"
+        android:id="@+id/bulat">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circle_white"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circle_white"
+            android:layout_marginRight="10dp"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circle_white"
+            android:layout_marginRight="10dp"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circle_white"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/bulat"
+        android:layout_marginTop="5dp"
+        android:paddingStart="10dp"
+        android:id="@+id/lokasi">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_lokasi"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PT. STEHOQ ROBOTIKA INDONESIA Jl. Belimbing A17 Perum, Sidoarum Blok II, Kec Godean Kab Sleman, D.I.Y Yogyakarta 55264"
+            android:textColor="@color/secondaryColor"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/garis_putih"
+        android:layout_below="@+id/lokasi"
+        android:layout_marginTop="10dp"
+        android:id="@+id/garisputih"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/garisputih"
+        android:layout_marginTop="5dp"
+        android:paddingStart="10dp"
+        android:id="@+id/checkBoxKota">
+
+        <CheckBox
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:id="@+id/checkBox" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Luar Kota"
+                android:textColor="@color/secondaryColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="*Centang jika tugas luar kantor"
+                android:textColor="@color/textColorWhite" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/buttonKonfirmasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxKota"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="0.6"
+            android:text="Batal"
+            android:background="@drawable/custombutton2"
+            android:textColor="@color/secondaryColor" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="0.6"
+            android:text="Konfirmasi"
+            android:background="@drawable/custombutton3"
+            android:id="@+id/konfrimasibutton"
+            android:textColor="@color/primaryColor" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonKonfirmasi"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/vector1" />
+</RelativeLayout>

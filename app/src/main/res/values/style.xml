@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttonstyle1" parent="Theme.AppCompat.Light">
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Tulis item lainnya yang diperlukan untuk tema Anda -->
+    </style>
+    <!-- styles.xml -->
+    <!-- styles.xml -->
+    <style name="BlueAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@color/primaryColor</item>
+        <item name="android:textColorPrimary">@color/textColorWhite</item>
+    </style>
+    <style name="RoundedCornerAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_background_biru</item>
+        <item name="android:textColorPrimary">@color/textColorWhite</item>
+    </style>
+
+</resources>
